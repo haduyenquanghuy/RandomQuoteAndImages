@@ -22,7 +22,7 @@ struct ContentView: View {
                 Text(randomImage.quote)
             }
         }.task {
-            await randomImageListVM.getRandomImages(ids: Array(100...120))
+            await randomImageListVM.getRandomImages(ids: Array(100...250))
         }
     }
 }
