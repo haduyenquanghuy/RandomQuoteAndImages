@@ -15,6 +15,8 @@ class RandomImageListViewModel: ObservableObject {
     
     func getRandomImages(ids: [Int]) async {
         
+        randomImages = []
+        
         do {
             try await withThrowingTaskGroup(of: (Int, RandomImage).self, body: { group in
                 for id in ids {
